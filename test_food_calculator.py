@@ -7,6 +7,7 @@ class TestFoodCalculator(unittest.TestCase):
         self.assertEqual(food_calculator.calculate_food(0, 0, 0, 14), 0)
         self.assertEqual(food_calculator.calculate_food(0, 0, 30, 0), 1080)
         self.assertEqual(food_calculator.calculate_food(3, 2, 1, 100), 0)
+        self.assertEqual(food_calculator.calculate_food(3, 2, 1, 20.5), 95.4)
 
         with self.assertRaises(Exception):
             food_calculator.calculate_food(10, 10, 11, 10)
