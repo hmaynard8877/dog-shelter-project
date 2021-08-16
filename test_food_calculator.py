@@ -7,11 +7,11 @@ class TestFoodCalculator(unittest.TestCase):
         self.assertEqual(food_calculator.calculate_food(5, 3, 7, 17), 363.6)
 
     def test_no_dogs(self):
-        #Verify no dogs in shelter
+        #If no dogs in shelter, don't order any food
         self.assertEqual(food_calculator.calculate_food(0, 0, 0, 14), 0)
 
     def test_no_leftover_food(self):
-        #Verify no leftover food
+        #Verify calculation when there is no leftover food
         self.assertEqual(food_calculator.calculate_food(5, 3, 7, 0), 384)
 
     def test_max_food_amount(self):
@@ -19,7 +19,7 @@ class TestFoodCalculator(unittest.TestCase):
         self.assertEqual(food_calculator.calculate_food(0, 0, 30, 0), 1080)
 
     def test_leftover_surplus(self):
-        #Verify enough leftover food to cover next month
+        #If there's enough leftover food to cover next month, don't order any food
         self.assertEqual(food_calculator.calculate_food(3, 2, 1, 100), 0)
         self.assertEqual(food_calculator.calculate_food(3, 2, 1, 220), 0)
 
