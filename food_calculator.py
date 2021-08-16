@@ -4,6 +4,9 @@ def calculate_food(num_small, num_medium, num_large, lbs_surplus):
     #Check that number of dog values are integers
     if (type(num_small) != int or type(num_medium) != int or type(num_large) != int):
         raise TypeError("Error: Number of dogs must be an integer.")
+    #Check that amount of excess food is a float or integer
+    if (not (type(lbs_surplus) == float or type(lbs_surplus) == int)):
+        raise TypeError("Error: Amount of leftover food must be an integer or float.")
     #Check that all values are positive
     if (num_small < 0 or num_medium < 0 or num_large < 0 or lbs_surplus < 0):
         raise Exception("Error: Values entered must be positive.")

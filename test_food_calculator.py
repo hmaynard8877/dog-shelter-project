@@ -36,12 +36,36 @@ class TestFoodCalculator(unittest.TestCase):
         #Verify invalid entry for number of dogs raises exception
         with self.assertRaises(TypeError):
             food_calculator.calculate_food(5.4, 4, 6, 5)
+
+        with self.assertRaises(TypeError):
+            food_calculator.calculate_food("cat", 4, 6, 5)
+
+        with self.assertRaises(TypeError):
+            food_calculator.calculate_food(True, 4, 6, 5)
         
+        with self.assertRaises(TypeError):
+            food_calculator.calculate_food(5, 4.5, 6, 5)
+
         with self.assertRaises(TypeError):
             food_calculator.calculate_food(5, "cat", 6, 5)
 
         with self.assertRaises(TypeError):
+            food_calculator.calculate_food(5, False, 6, 5)
+
+        with self.assertRaises(TypeError):
+            food_calculator.calculate_food(5, 4, 6.5, 5)
+
+        with self.assertRaises(TypeError):
+            food_calculator.calculate_food(5, 4, "cat", 5)
+
+        with self.assertRaises(TypeError):
             food_calculator.calculate_food(5, 4, True, 5)
+
+        with self.assertRaises(TypeError):
+            food_calculator.calculate_food(5, 4, 6, "cat")
+
+        with self.assertRaises(TypeError):
+            food_calculator.calculate_food(5, 4, 6, False)
 
     def test_positive_values(self):
         #Verify negitive values raises exception

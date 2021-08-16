@@ -28,6 +28,7 @@ It accepts four parameters:
 
 There are several checks within the function to determine whether the parameters are valid. If any are invalid, an exception will be raised.
 - `num_small`, `num_medium`, and `num_large` must be integers.
+- `lbs_surplus` must be either an integer or float.
 - All parameters must be positive and not null.
 - The sum of `num_small`, `sum_medium`, and `sum_large` must not be larger than 30, since that is the maximum number of dogs the shelter can hold.
 
