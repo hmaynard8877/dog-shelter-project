@@ -41,13 +41,13 @@ This file is an example of how a dog shelter might use the `calculate_food` func
 ### `test_food_calculator.py`
 
 This file contains the unit tests for the `calculate_food` function:
-- `test_food_calc` - verify calculator is working with valid inputs
-- `test_no_dogs` - if no dogs in the shelter, don't order any food
-- `test_no_leftover_food` - verify calculator when there's no leftover food
-- `test_max_food_amount` - verify calculator for the maximum amount of food the shelter would need to order
-- `test_leftover_surplus` - if leftover food is enough to cover next month, don't order any food
-- `test_float_leftover` - verify calculator when leftover value is a float
+- `test_food_calc` - verify the calculator is working with valid inputs
+- `test_no_dogs` - if there are no dogs in the shelter, don't order any food
+- `test_no_leftover_food` - verify the calculated result when there's no leftover food
+- `test_max_food_amount` - verify the calculated result for the maximum amount of food the shelter would need to order
+- `test_leftover_surplus` - if there is enough leftover food to cover next month, don't order any food
+- `test_float_leftover` - verify the calculated result when the leftover food value is a float
 - `test_max_capacity` - verify exception occurs when there are more than 30 dogs
-- `test_value_types` - verify exception occurs when value types are not valid
+- `test_value_types` - verify exception occurs when parameter value types are not valid
 - `test_positive_values` - verify exception occurs if any value is negative
 - `test_values_exist` - verify exception occurs if any value is null
