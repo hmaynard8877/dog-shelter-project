@@ -68,7 +68,7 @@ class TestFoodCalculator(unittest.TestCase):
             food_calculator.calculate_food(5, 4, 6, False)
 
     def test_positive_values(self):
-        #Verify negitive values raises exception
+        #Verify negative values raises exception
         with self.assertRaises(Exception):
             food_calculator.calculate_food(-2, 4, 6, 5)
 
